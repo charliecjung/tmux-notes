@@ -1,0 +1,77 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{}
+\title{Tmux}
+\author{Charlie Jung}
+\date{February 2019}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+ C-b ? : Help Menu.
+ tmux ls : List running sessions
+\\
+\section{Splitting Panes}
+
+ tmux : Start tmux in a new session
+\\
+ C-b \% : Split panes left and right
+\\
+ C-b " : Split planes top and bottom
+\\
+ C-b $<$arrowkey$>$ : Switching to a different pane
+\\
+e.g.  C-b left 
+\\
+
+ Ctrl-d, exit : Closing a pane
+
+\section{Windows}
+
+
+ C-b c : Create new window
+\\
+ C-b p : Switch to previous window (according to status bar)
+
+
+ C-b n : Switch to next window
+\\
+Or C-b  C-b $<$number$>$
+\\
+\section{Movement}
+
+ C-b z : pane goes full screen
+\\
+ C-b z again : to shrink to original size
+\\
+ C-b C $<$ arrowkey$>$ : Resize pane in $<$arrowkey$>$  direction.
+
+ C-b , : Rename current window
+
+
+
+
+
+
+
+\section{Sessions}
+
+ tmux attach -t 0 : Attach to 0 of tmux ls output
+\\
+ C-b d : Detach current session
+\\
+ C-b D : Choose which session to detach
+\\
+ tmux new -s database : Create a new session with name
+\\
+ tmux rename-session -t 0 database : Rename a session
+\\
+ tmux attach -t database : Attach Session
+
+
+
+\end{document}
+
